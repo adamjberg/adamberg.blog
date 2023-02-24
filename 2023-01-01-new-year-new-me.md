@@ -36,7 +36,7 @@ I enjoy writing and sharing, but I do not enjoy aimlessly consuming.  Unfortunat
 
 I will look into ways to get this to auto-share to certain platforms so those of you that are there can still see when new stuff is posted.  But for now, there's a sense of calmness that washes over me knowing that writing here doesn't suck me in to bad habits I don't want to partake in.
 
-Like many others around the world this time of year, I enter next year with a very similar objective as last year: fighting my smartphone/social media additction.  I'm tempted to go cold turkey again, but eliminating my smartphone is at odds with the fact that I'd like to build better healthier software for it.  Instead I will be looking at having clear dedicated time blocks that I allow myself to "use".  If that makes it sound like a drug, then good, because it very much operates the same way.  
+Like many others around the world this time of year, I enter next year with a very similar objective as last year: fighting my smartphone/social media addiction.  I'm tempted to go cold turkey again, but eliminating my smartphone is at odds with the fact that I'd like to build better healthier software for it.  Instead I will be looking at having clear dedicated time blocks that I allow myself to "use".  If that makes it sound like a drug, then good, because it very much operates the same way.  
 
 # Concluding Thoughts
 
