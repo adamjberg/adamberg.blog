@@ -26,7 +26,7 @@ export default function Index() {
     <div>
       <h1>Adam's Blog</h1>
       {routes.map((route: any) => {
-        return <Link to={route}>{route}</Link>
+        return <Link key={route} to={route}>{route}</Link>
       })}
     </div>
   );
