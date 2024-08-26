@@ -1,48 +1,33 @@
-import type { MetaFunction } from "@remix-run/node";
+import type { LoaderFunction, MetaFunction } from "@remix-run/node";
+import { Link, useLoaderData } from "@remix-run/react";
+import fs from 'fs/promises';
 
 export const meta: MetaFunction = () => {
   return [
-    { title: "New Remix App" },
-    { name: "description", content: "Welcome to Remix!" },
+    { title: "Adam's Blog" },
+    { name: "description", content: "Most posts written in one sitting, you get what you pay for" },
   ];
 };
 
+export const loader: LoaderFunction = async () => {
+  const routes = await fs.readdir('./app/routes');
+
+  return {
+    routes: routes.filter((r) => {
+      return r !== "_index.tsx";
+    })
+  }
+}
+
 export default function Index() {
+  const { routes } = useLoaderData() as any;
+  
   return (
-    <div className="font-sans p-4">
-      <h1 className="text-3xl">Welcome to Remix</h1>
-      <ul className="list-disc mt-4 pl-6 space-y-2">
-        <li>
-          <a
-            className="text-blue-700 underline visited:text-purple-900"
-            target="_blank"
-            href="https://remix.run/start/quickstart"
-            rel="noreferrer"
-          >
-            5m Quick Start
-          </a>
-        </li>
-        <li>
-          <a
-            className="text-blue-700 underline visited:text-purple-900"
-            target="_blank"
-            href="https://remix.run/start/tutorial"
-            rel="noreferrer"
-          >
-            30m Tutorial
-          </a>
-        </li>
-        <li>
-          <a
-            className="text-blue-700 underline visited:text-purple-900"
-            target="_blank"
-            href="https://remix.run/docs"
-            rel="noreferrer"
-          >
-            Remix Docs
-          </a>
-        </li>
-      </ul>
+    <div>
+      <h1>Adam's Blog</h1>
+      {routes.map((route: any) => {
+        return <Link to={route}>{route}</Link>
+      })}
     </div>
   );
 }
